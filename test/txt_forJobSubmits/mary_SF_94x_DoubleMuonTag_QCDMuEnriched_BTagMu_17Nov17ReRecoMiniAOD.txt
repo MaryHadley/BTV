@@ -1,0 +1,95 @@
+# Dataset_name  Number_of_jobs  EOS_location  PyCfg_parameters (optional)
+
+#DATA fatJetPtMin 350
+
+BTagMu_17Nov17RunB  200 /eos/cms/store/group/phys_btag/BoostedBTag/BTagNTuples/2017/9_4_X/BTagMu/BTagMu_Run2017B-17Nov2017-v1_MINIAOD//180719_195652/  \
+fatJetPtMin=350 \
+applyFatJetMuonTagging=True \
+fatJetDoubleTagging=True \
+triggerSelection=HLT_BTagMu_AK8Jet300_Mu5,HLT_BTagMu_Jet300_Mu5 \
+useJetProbaTree=True \
+useRelaxedMuonID=True \
+doPUReweightingOfficial=True \
+usePrunedMass=True \
+useSoftDropSubjets=True \
+fatJetTau21Min=0. \
+fatJetTau21Max=1.0 \ 
+fatJetGroomedMassMin=50.\
+outFilename=bTagValPlots.root \ 
+doJECUncert=True \
+jecUncPayloadName=/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunB/Fall17_17Nov2017B_V32_DATA_Uncertainty_AK8PFPuppi.txt  \
+newJECPayloadNames=/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunB/Fall17_17Nov2017B_V32_DATA_L1FastJet_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunB/Fall17_17Nov2017B_V32_DATA_L2Relative_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunB/Fall17_17Nov2017B_V32_DATA_L3Absolute_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunB/Fall17_17Nov2017B_V32_DATA_L2L3Residual_AK8PFPuppi.txt
+ 
+BTagMu_17Nov17RunC 200 /eos/cms/store/group/phys_btag/BoostedBTag/BTagNTuples/2017/9_4_X/BTagMu/BTagMu_Run2017C-17Nov2017-v1_MINIAOD/180719_195711/  \
+fatJetPtMin=350 \
+applyFatJetMuonTagging=True \
+fatJetDoubleTagging=True \
+triggerSelection=HLT_BTagMu_AK8Jet300_Mu5,HLT_BTagMu_Jet300_Mu5 
+useJetProbaTree=True \
+useRelaxedMuonID=True \
+doPUReweightingOfficial=True \
+usePrunedMass=True \ 
+useSoftDropSubjets=True \
+fatJetTau21Min=0.\
+fatJetTau21Max=1.0 \
+fatJetGroomedMassMin=50.\
+outFilename=bTagValPlots.root \
+doJECUncert=True \
+jecUncPayloadName=/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunC/Fall17_17Nov2017C_V32_DATA_Uncertainty_AK8PFPuppi.txt  \
+newJECPayloadNames=/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunC/Fall17_17Nov2017C_V32_DATA_L1FastJet_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunC/Fall17_17Nov2017C_V32_DATA_L2Relative_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunC/Fall17_17Nov2017C_V32_DATA_L3Absolute_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunC/Fall17_17Nov2017C_V32_DATA_L2L3Residual_AK8PFPuppi.txt
+
+BTagMu_17Nov17RunD 200 /eos/cms/store/group/phys_btag/BoostedBTag/BTagNTuples/2017/9_4_X/BTagMu/BTagMu_Run2017D-17Nov2017-v1_MINIAOD/180719_195732/ \
+fatJetPtMin=350 \
+applyFatJetMuonTagging=True \
+fatJetDoubleTagging=True \
+triggerSelection=HLT_BTagMu_AK8Jet300_Mu5,HLT_BTagMu_Jet300_Mu5 \
+useJetProbaTree=True \
+useRelaxedMuonID=True \
+doPUReweightingOfficial=True \
+usePrunedMass=True \
+useSoftDropSubjets=True \
+fatJetTau21Min=0. \
+fatJetTau21Max=1.0 \ 
+fatJetGroomedMassMin=50. \
+outFilename=bTagValPlots.root \
+doJECUncert=True \
+jecUncPayloadName=/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunDE/Fall17_17Nov2017DE_V32_DATA_Uncertainty_AK8PFPuppi.txt \ 
+newJECPayloadNames=/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunDE/Fall17_17Nov2017DE_V32_DATA_L1FastJet_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunDE/Fall17_17Nov2017DE_V32_DATA_L2Relative_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunDE/Fall17_17Nov2017DE_V32_DATA_L3Absolute_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunDE/Fall17_17Nov2017DE_V32_DATA_L2L3Residual_AK8PFPuppi.txt
+
+BTagMu_17Nov17RunE 200 /eos/cms/store/group/phys_btag/BoostedBTag/BTagNTuples/2017/9_4_X/BTagMu/BTagMu_Run2017E-17Nov2017-v1_MINIAOD/180731_080620/  \
+fatJetPtMin=350 \
+applyFatJetMuonTagging=True \
+fatJetDoubleTagging=True \
+triggerSelection=HLT_BTagMu_AK8Jet300_Mu5,HLT_BTagMu_Jet300_Mu5 \
+useJetProbaTree=True \
+useRelaxedMuonID=True \
+doPUReweightingOfficial=True \
+usePrunedMass=True \
+useSoftDropSubjets=True \
+fatJetTau21Min=0. \
+fatJetTau21Max=1.0 \
+fatJetGroomedMassMin=50. \
+outFilename=bTagValPlots.root \
+doJECUncert=True \
+jecUncPayloadName=/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunDE/Fall17_17Nov2017DE_V32_DATA_Uncertainty_AK8PFPuppi.txt \
+newJECPayloadNames=/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunDE/Fall17_17Nov2017DE_V32_DATA_L1FastJet_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunDE/Fall17_17Nov2017DE_V32_DATA_L2Relative_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunDE/Fall17_17Nov2017DE_V32_DATA_L3Absolute_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunDE/Fall17_17Nov2017DE_V32_DATA_L2L3Residual_AK8PFPuppi.txt
+
+
+BTagMu_17Nov17RunF 200 /eos/cms/store/group/phys_btag/BoostedBTag/BTagNTuples/2017/9_4_X/BTagMu/BTagMu_Run2017F-17Nov2017-v1_MINIAOD/180731_080644/  \
+fatJetPtMin=350 \
+applyFatJetMuonTagging=True \
+fatJetDoubleTagging=True \
+triggerSelection=HLT_BTagMu_AK8Jet300_Mu5,HLT_BTagMu_Jet300_Mu5 \
+useJetProbaTree=True \
+useRelaxedMuonID=True \
+doPUReweightingOfficial=True \
+usePrunedMass=True \
+useSoftDropSubjets=True \
+fatJetTau21Min=0. \
+fatJetTau21Max=1.0 \
+fatJetGroomedMassMin=50. \
+outFilename=bTagValPlots.root \
+doJECUncert=True \
+jecUncPayloadName=/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunF/Fall17_17Nov2017F_V32_DATA_Uncertainty_AK8PFPuppi.txt \
+newJECPayloadNames=/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunF/Fall17_17Nov2017F_V32_DATA_L1FastJet_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunF/Fall17_17Nov2017F_V32_DATA_L2Relative_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunF/Fall17_17Nov2017F_V32_DATA_L3Absolute_AK8PFPuppi.txt,/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/test/txt_forJobSubmits/JEC_txt_files/17Nov17_RunF/Fall17_17Nov2017F_V32_DATA_L2L3Residual_AK8PFPuppi.txt
+

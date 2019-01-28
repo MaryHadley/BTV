@@ -28,8 +28,9 @@ using namespace std;
 
 
 
-//TString ptcut = "p_{T} (AK8 jets) > 350 GeV";
-// TString filename    ="/afs/cern.ch/user/r/rsyarif/workHere/HbbTagVal/Jan10-2018_CommSF_v1/CMSSW_9_4_1/src/RecoBTag/BTagValidation/BTV/results/plots_final/Run2017BCDEF_ReReco_QCDMuonEnriched_AK8Jet300orAK4Jet300_Pt350_Final_DoubleMuonTaggedFatJets_histograms_btagval_v1.root";
+TString ptcut = "p_{T} (AK8 jets) > 350 GeV";
+TString filename = "/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/BTV/results/plots_final/BTagMu_17Nov17_ReReco_DoubleMuonTaggedFatJets_fatJetPtMinIs350_histograms_btagval.root";
+//TString filename    ="/afs/cern.ch/user/r/rsyarif/workHere/HbbTagVal/Jan10-2018_CommSF_v1/CMSSW_9_4_1/src/RecoBTag/BTagValidation/BTV/results/plots_final/Run2017BCDEF_ReReco_QCDMuonEnriched_AK8Jet300orAK4Jet300_Pt350_Final_DoubleMuonTaggedFatJets_histograms_btagval_v1.root";
 
 // TString ptcut = "250 GeV < p_{T} (AK8 jets) < 350 GeV";
 // //TString filename    ="/afs/cern.ch/user/r/rsyarif/workHere/HbbTagVal/Jan10-2018_CommSF_v1/CMSSW_9_4_1/src/RecoBTag/BTagValidation/BTV/results/plots_final/Run2017BCDEF_ReReco_QCDMuonEnriched_AK4DiJet170_Pt250_Final_DoubleMuonTaggedFatJets_histograms_btagval_v1.root";
@@ -45,10 +46,11 @@ TString filename_ext="" ;
 // TString dir4plots   = "Comm_DoubleMuTag_Pt350_BTagMu_RunBtoF_ReReco_QCDMuEnr_w1p27corr_ptReweighted_Feb15-2018"; //
 
 
-TString ptcut = "p_{T} (AK8 jets) > 350 GeV";
-TString filename    ="../BTV/results/plots_final/Run2017BCDEF_QCDMuEnriched_Pt350.root";
-TString dir4plots   = "Run2017BCDEF_QCDMuEnriched_Pt350";
+//TString ptcut = "p_{T} (AK8 jets) > 350 GeV";
+//TString filename    ="../BTV/results/plots_final/Run2017BCDEF_QCDMuEnriched_Pt350.root";
+//TString dir4plots   = "Run2017BCDEF_QCDMuEnriched_Pt350";
 
+TString dir4plots = "/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/macros/firstTest35OMinPtPlots";
 TString filename_uncUp  ="" ;
 TString filename_uncDown="" ;
 

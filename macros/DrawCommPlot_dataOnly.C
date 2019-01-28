@@ -27,19 +27,19 @@
 using namespace std;
 
 TString ptcut = "p_{T} (AK8 jets) > 350 GeV";
-TString filename0	="/afs/cern.ch/user/r/rsyarif/workHere/HbbTagVal/Jan12_SFCommPlots_NoTreeBTagVal/CMSSW_8_0_23/src/RecoBTag/BTagValidation/test/Mu_350_merged_PRH/Final_DoubleMuonTaggedFatJets_MuonEnrichedJets_dataWithMCJP_histograms_btagval.root"; //--> GT:80X_dataRun2_Prompt_v15
+//TString filename0	="/afs/cern.ch/user/r/rsyarif/workHere/HbbTagVal/Jan12_SFCommPlots_NoTreeBTagVal/CMSSW_8_0_23/src/RecoBTag/BTagValidation/test/Mu_350_merged_PRH/Final_DoubleMuonTaggedFatJets_MuonEnrichedJets_dataWithMCJP_histograms_btagval.root"; //--> GT:80X_dataRun2_Prompt_v15
 
-TString filename1    ="/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Aug29-2017_testingBenjaminsCode/CMSSW_9_2_7_patch1/src/RecoBTag/BTagValidation/BTV/results/plots_final/case1_Final_DoubleMuonTaggedFatJets_histograms_btagval.root";
-TString filename2    ="/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Aug29-2017_testingBenjaminsCode/CMSSW_9_2_7_patch1/src/RecoBTag/BTagValidation/BTV/results/plots_final/case2_Final_DoubleMuonTaggedFatJets_histograms_btagval.root";
-TString filename3    ="/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Aug29-2017_testingBenjaminsCode/CMSSW_9_2_7_patch1/src/RecoBTag/BTagValidation/BTV/results/plots_final/case3_Final_DoubleMuonTaggedFatJets_histograms_btagval.root";
-TString filename4    ="/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Aug29-2017_testingBenjaminsCode/CMSSW_9_2_7_patch1/src/RecoBTag/BTagValidation/BTV/results/plots_final/case4_Final_DoubleMuonTaggedFatJets_histograms_btagval.root";
+TString filename0    ="/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/BTV/results/plots_final/BTagMu_17Nov17_ReReco_DoubleMuonTaggedFatJets_histograms_btagval.root";
+//TString filename2    ="/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Aug29-2017_testingBenjaminsCode/CMSSW_9_2_7_patch1/src/RecoBTag/BTagValidation/BTV/results/plots_final/case2_Final_DoubleMuonTaggedFatJets_histograms_btagval.root";
+//TString filename3    ="/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Aug29-2017_testingBenjaminsCode/CMSSW_9_2_7_patch1/src/RecoBTag/BTagValidation/BTV/results/plots_final/case3_Final_DoubleMuonTaggedFatJets_histograms_btagval.root";
+//TString filename4    ="/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Aug29-2017_testingBenjaminsCode/CMSSW_9_2_7_patch1/src/RecoBTag/BTagValidation/BTV/results/plots_final/case4_Final_DoubleMuonTaggedFatJets_histograms_btagval.root";
 
 // TString filename1    ="/afs/cern.ch/user/r/rsyarif/workHere/HbbTagVal/Aug2-2017_2017Data/CMSSW_9_2_7_patch1/src/RecoBTag/BTagValidation/test/Mu_350_BTagMu_23June2017B/Final_DoubleMuonTaggedFatJets_MuonEnrichedJets_dataWithMCJP_histograms_btagval.root";
 
 
 TString filename_ext="" ;
 
-TString dir4plots   = "Comm_DoubleMuTag_BTagMu_6Sep2017";
+TString dir4plots   = "Comm_DoubleMuTag_BTagMu_17Nov17_ReReco_Dec_2018";
 
 TString filename_uncUp  ="" ;
 TString filename_uncDown="" ;
@@ -57,7 +57,7 @@ bool prunedjets= 0;
 bool logy      = 1;
 bool dodata    = 1;
 bool extNorm   = 0; // used only for double-muon- and double-b-tagged fat jets
-double norm_lightjets = 1.27 ; // used only for QCD MuEnriched.
+double norm_lightjets = 1.27 ; // used only for QCD MuEnriched. //ask Dinko about the light flavour factor
 // double norm_lightjets = 1.0 ; // used for QCDincl.
 
 bool inclTTbar = 0;
@@ -494,56 +494,58 @@ void DrawStacked(TString name, TString histotitle, bool log, bool doData, bool f
   TH1D* hist_data4;
 
   TFile *myFile0  = TFile::Open(filename0,"READ") ;
-  TFile *myFile1  = TFile::Open(filename1,"READ") ;
-  TFile *myFile2  = TFile::Open(filename2,"READ") ;
-  TFile *myFile3  = TFile::Open(filename3,"READ") ;
-  TFile *myFile4  = TFile::Open(filename4,"READ") ;
+  //TFile *myFile1  = TFile::Open(filename1,"READ") ;
+  //TFile *myFile2  = TFile::Open(filename2,"READ") ;
+  //TFile *myFile3  = TFile::Open(filename3,"READ") ;
+  //TFile *myFile4  = TFile::Open(filename4,"READ") ;
 
   myFile0->cd();
   if (doData)    hist_data0  = (TH1D*)myFile0->Get("DATA__"+name+"_data");
 
-  myFile1->cd();
-  if (doData)    hist_data1  = (TH1D*)myFile1->Get("DATA__"+name+"_data");
+  //myFile1->cd();
+  //if (doData)    hist_data1  = (TH1D*)myFile1->Get("DATA__"+name+"_data");
 
-  myFile2->cd();
-  if (doData)    hist_data2  = (TH1D*)myFile2->Get("DATA__"+name+"_data");
+  //myFile2->cd();
+  //if (doData)    hist_data2  = (TH1D*)myFile2->Get("DATA__"+name+"_data");
 
-  myFile3->cd();
-  if (doData)    hist_data3  = (TH1D*)myFile3->Get("DATA__"+name+"_data");
+  //myFile3->cd();
+  //if (doData)    hist_data3  = (TH1D*)myFile3->Get("DATA__"+name+"_data");
 
-  myFile4->cd();
-  if (doData)    hist_data4  = (TH1D*)myFile4->Get("DATA__"+name+"_data");
+  //myFile4->cd();
+  //if (doData)    hist_data4  = (TH1D*)myFile4->Get("DATA__"+name+"_data");
 
   std::cout << " hist_data0 name = " << hist_data0->GetName() << " integral = " << hist_data0->Integral() << endl ;
-  std::cout << " hist_data1 name = " << hist_data1->GetName() << " integral = " << hist_data1->Integral() << endl ;
-  std::cout << " hist_data2 name = " << hist_data2->GetName() << " integral = " << hist_data2->Integral() << endl ;
-  std::cout << " hist_data3 name = " << hist_data3->GetName() << " integral = " << hist_data3->Integral() << endl ;
-  std::cout << " hist_data4 name = " << hist_data4->GetName() << " integral = " << hist_data4->Integral() << endl ;
+  //std::cout << " hist_data1 name = " << hist_data1->GetName() << " integral = " << hist_data1->Integral() << endl ;
+  //std::cout << " hist_data2 name = " << hist_data2->GetName() << " integral = " << hist_data2->Integral() << endl ;
+  //std::cout << " hist_data3 name = " << hist_data3->GetName() << " integral = " << hist_data3->Integral() << endl ;
+  //std::cout << " hist_data4 name = " << hist_data4->GetName() << " integral = " << hist_data4->Integral() << endl ;
+  std::cout << "I got here! Ok 1";
 
 	if (nRebin>1) {
 	  if (doData)    hist_data0->Rebin(nRebin);
-	  if (doData)    hist_data1->Rebin(nRebin);
-	  if (doData)    hist_data2->Rebin(nRebin);
-	  if (doData)    hist_data3->Rebin(nRebin);
-	  if (doData)    hist_data4->Rebin(nRebin);
+          std::cout << "I got here! Ok 2!";
+	  //if (doData)    hist_data1->Rebin(nRebin);
+	  //if (doData)    hist_data2->Rebin(nRebin);
+	  //if (doData)    hist_data3->Rebin(nRebin);
+	  //if (doData)    hist_data4->Rebin(nRebin);
 	}
 
   if (!name.Contains("sv_mass")) {
     if (doData)    fix(hist_data0);
-    if (doData)    fix(hist_data1);
-    if (doData)    fix(hist_data2);
-    if (doData)    fix(hist_data3);
-    if (doData)    fix(hist_data4);
+    //if (doData)    fix(hist_data1);
+    //if (doData)    fix(hist_data2);
+    //if (doData)    fix(hist_data3);
+    //if (doData)    fix(hist_data4);
   }
 
   int xlow = hist_data0->GetXaxis()->FindBin(rangeXLow);
   int xhigh = hist_data0->GetXaxis()->FindBin(rangeXHigh);
 
   if (doData)    beautify(hist_data0  , 1    , 1 , 0       , 1) ;
-  if (doData)    beautify(hist_data1  , 1    , 2 , 0       , 2) ;
-  if (doData)    beautify(hist_data2  , 1    , 3 , 0       , 3) ;
-  if (doData)    beautify(hist_data3  , 1    , 4 , 0       , 4) ;
-  if (doData)    beautify(hist_data4  , 1    , 5 , 0       , 5) ;
+  //if (doData)    beautify(hist_data1  , 1    , 2 , 0       , 2) ;
+  // if (doData)    beautify(hist_data2  , 1    , 3 , 0       , 3) ;
+  //if (doData)    beautify(hist_data3  , 1    , 4 , 0       , 4) ;
+  //if (doData)    beautify(hist_data4  , 1    , 5 , 0       , 5) ;
 
   TString histotitle_ = histotitle;
   TString yaxistitle="" ; 
@@ -614,40 +616,40 @@ void DrawStacked(TString name, TString histotitle, bool log, bool doData, bool f
   
   //normalize to reference
   float NormToReference = hist_data0->Integral();
-  hist_data1->Scale( NormToReference / hist_data1->Integral());
-  hist_data2->Scale( NormToReference / hist_data2->Integral());
-  hist_data3->Scale( NormToReference / hist_data3->Integral());
-  hist_data4->Scale( NormToReference / hist_data4->Integral());
+  //hist_data1->Scale( NormToReference / hist_data1->Integral());
+  //hist_data2->Scale( NormToReference / hist_data2->Integral());
+  //hist_data3->Scale( NormToReference / hist_data3->Integral());
+  //hist_data4->Scale( NormToReference / hist_data4->Integral());
 
   THStack *stack = new THStack("stack","");
   stack->Add(hist_data0);
   //stack->Add(hist_data1);
-  stack->Add(hist_data2);
-  stack->Add(hist_data3);
-  stack->Add(hist_data4);
+  //stack->Add(hist_data2);
+  //stack->Add(hist_data3);
+  //stack->Add(hist_data4);
   
   TH1D *histo_ratio1, *histo_ratio2, *histo_ratio3, *histo_ratio4;
-  if (doData) {
-    histo_ratio1 = (TH1D*) hist_data1->Clone();
-    histo_ratio2 = (TH1D*) hist_data2->Clone();
-    histo_ratio3 = (TH1D*) hist_data3->Clone();
-    histo_ratio4 = (TH1D*) hist_data4->Clone();
+ // if (doData) {
+  //  histo_ratio1 = (TH1D*) hist_data1->Clone();
+  //  histo_ratio2 = (TH1D*) hist_data2->Clone();
+  //  histo_ratio3 = (TH1D*) hist_data3->Clone();
+  //  histo_ratio4 = (TH1D*) hist_data4->Clone();
 
-    histo_ratio1->SetName("histo_ratio");
-    histo_ratio2->SetName("histo_ratio");
-    histo_ratio3->SetName("histo_ratio");
-    histo_ratio4->SetName("histo_ratio");
+ //   histo_ratio1->SetName("histo_ratio");
+ //   histo_ratio2->SetName("histo_ratio");
+ //   histo_ratio3->SetName("histo_ratio");
+ //   histo_ratio4->SetName("histo_ratio");
 
-    histo_ratio1->SetTitle("");
-    histo_ratio2->SetTitle("");
-    histo_ratio3->SetTitle("");
-    histo_ratio4->SetTitle("");
+  //  histo_ratio1->SetTitle("");
+  //  histo_ratio2->SetTitle("");
+  //  histo_ratio3->SetTitle("");
+  //  histo_ratio4->SetTitle("");
 
-    histo_ratio1->Divide(hist_data0);
-    histo_ratio2->Divide(hist_data0);
-    histo_ratio3->Divide(hist_data0);
-    histo_ratio4->Divide(hist_data0);
-  }
+   // histo_ratio1->Divide(hist_data0);
+   // histo_ratio2->Divide(hist_data0);
+   // histo_ratio3->Divide(hist_data0);
+   // histo_ratio4->Divide(hist_data0);
+ // }
 
   setTDRStyle();
   gStyle->SetErrorX(0.);
@@ -708,30 +710,30 @@ void DrawStacked(TString name, TString histotitle, bool log, bool doData, bool f
 //     hist_data0->SetLineWidth(2);
     hist_data0->SetMarkerColor(1);
 
-    hist_data1->SetMarkerStyle(21);
+ //   hist_data1->SetMarkerStyle(21);
 //     hist_data1->SetMarkerSize(0.75);
 //     hist_data1->SetLineWidth(2);
-    hist_data1->SetMarkerColor(2);
+//    hist_data1->SetMarkerColor(2);
 
-    hist_data2->SetMarkerStyle(22);
+ //   hist_data2->SetMarkerStyle(22);
 //     hist_data2->SetMarkerSize(0.75);
-    hist_data2->SetLineStyle(1);
-    hist_data2->SetLineWidth(2);
-    hist_data2->SetLineColor(kRed);
-    hist_data2->SetMarkerColor(kRed);
+ //   hist_data2->SetLineStyle(1);
+//    hist_data2->SetLineWidth(2);
+ //   hist_data2->SetLineColor(kRed);
+ //   hist_data2->SetMarkerColor(kRed);
 
-    hist_data3->SetMarkerStyle(23);
+//    hist_data3->SetMarkerStyle(23);
 //     hist_data3->SetMarkerSize(0.75);
-    hist_data3->SetLineStyle(1);
-    hist_data3->SetLineWidth(1);
-    hist_data3->SetMarkerColor(4);
+//    hist_data3->SetLineStyle(1);
+//    hist_data3->SetLineWidth(1);
+//    hist_data3->SetMarkerColor(4);
 
-    hist_data4->SetMarkerStyle(33);
-    hist_data4->SetMarkerSize(1.25);
-    hist_data4->SetLineStyle(2);
-    hist_data4->SetLineWidth(1);
-    hist_data4->SetLineColor(kGreen+2);
-    hist_data4->SetMarkerColor(kGreen+2);
+//    hist_data4->SetMarkerStyle(33);
+//    hist_data4->SetMarkerSize(1.25);
+//    hist_data4->SetLineStyle(2);
+//    hist_data4->SetLineWidth(1);
+//    hist_data4->SetLineColor(kGreen+2);
+//    hist_data4->SetMarkerColor(kGreen+2);
   }
 
   //if (name=="jet_phi" || name=="sv_phi" || name=="muon_phi") {
@@ -753,9 +755,9 @@ void DrawStacked(TString name, TString histotitle, bool log, bool doData, bool f
 
   if (doData) hist_data0->Draw("E1X0");
 //   if (doData) hist_data1->Draw("SAMEE1X0");
-  if (doData) hist_data2->Draw(" SAMEE1X0");
-  if (doData) hist_data3->Draw(" SAMEE1X0");
-  if (doData) hist_data4->Draw(" SAMEE1X0");
+  //if (doData) hist_data2->Draw(" SAMEE1X0");
+ // if (doData) hist_data3->Draw(" SAMEE1X0");
+ // if (doData) hist_data4->Draw(" SAMEE1X0");
 
   pad0->RedrawAxis();
 
@@ -781,9 +783,9 @@ void DrawStacked(TString name, TString histotitle, bool log, bool doData, bool f
 
   if (doData) leg->AddEntry(hist_data0,     "16H  Promptv2,v3 (Ref)",     "e1p");
   //if (doData) leg->AddEntry(hist_data1,     "Case 1",     "e1p");
-  if (doData) leg->AddEntry(hist_data2,     "17B  Prompt (Case 2)",     "e1p");
-  if (doData) leg->AddEntry(hist_data3,     "17BC Prompt (Case 3)",     "e1p");
-  if (doData) leg->AddEntry(hist_data4,     "17C  Prompt (Case 4)",     "e1p");
+ // if (doData) leg->AddEntry(hist_data2,     "17B  Prompt (Case 2)",     "e1p");
+//  if (doData) leg->AddEntry(hist_data3,     "17BC Prompt (Case 3)",     "e1p");
+ // if (doData) leg->AddEntry(hist_data4,     "17C  Prompt (Case 4)",     "e1p");
 
   leg->Draw();
 
@@ -866,7 +868,7 @@ void DrawStacked(TString name, TString histotitle, bool log, bool doData, bool f
   pad0->Modified();
 
   c1->cd();
-
+std::cout << "I got here! Ok 3!";
   if (doData) {
     TPad* pad1 = new TPad("pad1", "pad1",0,0.,1.0,0.32);
     pad1->Draw();
@@ -879,69 +881,70 @@ void DrawStacked(TString name, TString histotitle, bool log, bool doData, bool f
     pad1->SetFrameBorderMode(0);
     pad1->SetLeftMargin(0.1); //reduce left white space - rizki
 
-    histo_ratio1->SetMarkerStyle(21);
+//    histo_ratio1->SetMarkerStyle(21);
 //     histo_ratio1->SetMarkerSize(0.75);
-    histo_ratio1->SetMarkerColor(2);
+//    histo_ratio1->SetMarkerColor(2);
 //     histo_ratio1->SetLineWidth(2);
-    histo_ratio1->SetLineStyle(2);
-    histo_ratio1->SetLineColor(2);
+//    histo_ratio1->SetLineStyle(2);
+//    histo_ratio1->SetLineColor(2);
 
-    histo_ratio2->SetMarkerStyle(22);
+//    histo_ratio2->SetMarkerStyle(22);
 //     histo_ratio2->SetMarkerSize(0.75);
-    histo_ratio2->SetMarkerColor(kRed);
-    histo_ratio2->SetLineWidth(2);
-    histo_ratio2->SetLineStyle(1);
-    histo_ratio2->SetLineColor(kRed);
+//    histo_ratio2->SetMarkerColor(kRed);
+//    histo_ratio2->SetLineWidth(2);
+//    histo_ratio2->SetLineStyle(1);
+//    histo_ratio2->SetLineColor(kRed);
 
-    histo_ratio3->SetMarkerStyle(23);
+//    histo_ratio3->SetMarkerStyle(23);
 //     histo_ratio3->SetMarkerSize(0.75);
-    histo_ratio3->SetMarkerColor(4);
-    histo_ratio3->SetLineWidth(1);
-    histo_ratio3->SetLineStyle(1);
-    histo_ratio3->SetLineColor(4);
+//    histo_ratio3->SetMarkerColor(4);
+//    histo_ratio3->SetLineWidth(1);
+//    histo_ratio3->SetLineStyle(1);
+//    histo_ratio3->SetLineColor(4);
 
-    histo_ratio4->SetMarkerStyle(33);
-    histo_ratio4->SetMarkerSize(1.25);
-    histo_ratio4->SetMarkerColor(kGreen+2);
-    histo_ratio4->SetLineWidth(2);
-    histo_ratio4->SetLineStyle(9);
-    histo_ratio4->SetLineColor(kGreen+2);
+//    histo_ratio4->SetMarkerStyle(33);
+//    histo_ratio4->SetMarkerSize(1.25);
+//    histo_ratio4->SetMarkerColor(kGreen+2);
+//    histo_ratio4->SetLineWidth(2);
+//    histo_ratio4->SetLineStyle(9);
+//    histo_ratio4->SetLineColor(kGreen+2);
 
-    histo_ratio2->GetYaxis()->SetTitle("Case/Ref");
-    histo_ratio2->SetTitleOffset(0.9,"X");
-    histo_ratio2->SetTitleOffset(0.31,"Y");
-    histo_ratio2->GetXaxis()->SetTitle(histotitle_);
-    histo_ratio2->GetYaxis()->SetNdivisions( 505 );
+//    histo_ratio2->GetYaxis()->SetTitle("Case/Ref");
+//    histo_ratio2->SetTitleOffset(0.9,"X");
+//    histo_ratio2->SetTitleOffset(0.31,"Y");
+//    histo_ratio2->GetXaxis()->SetTitle(histotitle_);
+//    histo_ratio2->GetYaxis()->SetNdivisions( 505 );
 
     double labelsizex=0.12;
     double labelsizey=0.12;
     double titlesizex=0.15;
     double titlesizey=0.14;
 
-    histo_ratio2->GetXaxis()->SetLabelSize( labelsizex );
-    histo_ratio2->GetXaxis()->SetTitleSize( titlesizex );
-    histo_ratio2->GetYaxis()->SetLabelSize( labelsizey );
-    histo_ratio2->GetYaxis()->SetTitleSize( titlesizey );
+//    histo_ratio2->GetXaxis()->SetLabelSize( labelsizex );
+//    histo_ratio2->GetXaxis()->SetTitleSize( titlesizex );
+//    histo_ratio2->GetYaxis()->SetLabelSize( labelsizey );
+//    histo_ratio2->GetYaxis()->SetTitleSize( titlesizey );
 
     if (setXRange) {
       if (rangeXLow == rangeXHigh) std::cout << "Error: X-axis low and high ranges have same value\n" ;
-      else {
-        histo_ratio2->GetXaxis()->SetRangeUser(rangeXLow, rangeXHigh) ;
-      }
+     // else {
+       // histo_ratio2->GetXaxis()->SetRangeUser(rangeXLow, rangeXHigh) ;
+     // }
     }
-
-    histo_ratio2->SetMinimum(0.0);
-    histo_ratio2->SetMaximum(2.0);
+std::cout << "I got here! Ok 4!";
+//    histo_ratio2->SetMinimum(0.0);
+//    histo_ratio2->SetMaximum(2.0);
 
     //histo_ratio1->Draw("E1X0");
-    histo_ratio2->Draw(" hist E1X0");
-    histo_ratio3->Draw(" hist SAMEE1X0");
-    histo_ratio4->Draw(" hist E1X0 SAME");
-    //if (uncBand) histo_ratio_unc->Draw("sameE2");
-
+   // histo_ratio2->Draw(" hist E1X0");
+   // histo_ratio3->Draw(" hist SAMEE1X0");
+   // histo_ratio4->Draw(" hist E1X0 SAME");
+   std::cout << "I got here! Ok 5!";
+  //if (uncBand) histo_ratio_unc->Draw("sameE2"); //if I comment this out, I get a seg fault with no useful info...
+ 
     //pad1->Update();
     pad1->Modified();
-  }
+  } //verified that this does something...
 
   c1->cd();
 
@@ -956,7 +959,7 @@ void DrawStacked(TString name, TString histotitle, bool log, bool doData, bool f
   c1->Modified();
   c1->cd();
   c1->SetSelected(c1) ;
-
+std::cout << "I got here! Ok 6!";
   if( name.Contains("FatJet_phi") && nRebin==40 ) name = name + "_SingleBin";
 
   TString name_plot=name+"_Linear"+formata;
@@ -966,8 +969,8 @@ void DrawStacked(TString name, TString histotitle, bool log, bool doData, bool f
   if(log) name_plot=name+"_Log"+formatb;
   c1->SaveAs(dir4plots+"/"+name_plot);
   name_plot=name+"_Linear"+formatc;
-//   if(log) name_plot=name+"_Log"+formatc;
-//   c1->SaveAs(dir4plots+"/"+name_plot);
+   if(log) name_plot=name+"_Log"+formatc;
+   c1->SaveAs(dir4plots+"/"+name_plot);
 
   if (log && web) {  // save also _Linear for web
     pad0 ->cd();
@@ -975,8 +978,9 @@ void DrawStacked(TString name, TString histotitle, bool log, bool doData, bool f
     c1->cd();
     c1->SaveAs(dir4plots+"/"+name+"_Linear"+formata);
   }
-
+std::cout << "I got here! Ok 6.5!";
 }
+
 
 //--------------------------
 void DrawTagRate(TString name, TString histotitle, bool log, bool doData){
@@ -1056,7 +1060,7 @@ void DrawTagRate(TString name, TString histotitle, bool log, bool doData){
     TagRate_MC_gspl_c->SetBinContent(ii+1, hist_gsplit_c->Integral(ii+1,nbin_max+1) / totmc);
 
   }
-
+std::cout << "I got here! Ok 7";
   double titleoffsety=0.2;
   double titlesizex=0.17;
   double titlesizey=0.2;

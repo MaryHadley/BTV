@@ -17,8 +17,8 @@ eospath=/eos/cms/store/group/phys_btag/BoostedBTag/BTagNTuples/8_0_X_v2.03/BTagV
 # ./createAndSubmitJobs_new.py -w Mu_350_nTracks -e true -o $eospath -c btagvalidation_cfg.py -d txt_forJobSubmits/rizki_SF_80x_DoubleMuonTag_QCDMuEnriched_BTagMu_mcJPcalib_HLTAK8Jet300_OR_HLTJet300_pt350_nTracks.txt -q 8nh
 # ./createAndSubmitJobs_new.py -w Mu_250_nTracks -e true -o $eospath -c btagvalidation_cfg.py -d txt_forJobSubmits/rizki_SF_80x_DoubleMuonTag_QCDMuEnriched_BTagMu_mcJPcalib_HLTDiJet170_pt250to350_nTracks.txt -q 8nh
 
-./createAndSubmitJobs_new.py -w Mu_350_nTracks_ptReweighted -e true -o $eospath -c btagvalidation_cfg.py -d txt_forJobSubmits/rizki_SF_80x_DoubleMuonTag_QCDMuEnriched_BTagMu_mcJPcalib_HLTAK8Jet300_OR_HLTJet300_pt350_nTracks_ptReweighted.txt -q cmscaf1nh
-./createAndSubmitJobs_new.py -w Mu_250_nTracks_ptReweighted -e true -o $eospath -c btagvalidation_cfg.py -d txt_forJobSubmits/rizki_SF_80x_DoubleMuonTag_QCDMuEnriched_BTagMu_mcJPcalib_HLTDiJet170_pt250to350_nTracks_ptReweighted.txt -q cmscaf1nh
+#./createAndSubmitJobs_new.py -w Mu_350_nTracks_ptReweighted -e true -o $eospath -c btagvalidation_cfg.py -d txt_forJobSubmits/rizki_SF_80x_DoubleMuonTag_QCDMuEnriched_BTagMu_mcJPcalib_HLTAK8Jet300_OR_HLTJet300_pt350_nTracks_ptReweighted.txt -q cmscaf1nh
+#./createAndSubmitJobs_new.py -w Mu_250_nTracks_ptReweighted -e true -o $eospath -c btagvalidation_cfg.py -d txt_forJobSubmits/rizki_SF_80x_DoubleMuonTag_QCDMuEnriched_BTagMu_mcJPcalib_HLTDiJet170_pt250to350_nTracks_ptReweighted.txt -q cmscaf1nh
 # 
 # ./createAndSubmitJobs_new.py -w Mu_350_CD -e true -o $eospath -c btagvalidation_cfg.py -d txt_forJobSubmits/rizki_SF_80x_DoubleMuonTag_QCDMuEnriched_BTagMu_mcJPcalib_HLTAK8Jet300_OR_HLTJet300_pt350_CD.txt -q 8nh
 # ./createAndSubmitJobs_new.py -w Mu_250_CD -e true -o $eospath -c btagvalidation_cfg.py -d txt_forJobSubmits/rizki_SF_80x_DoubleMuonTag_QCDMuEnriched_BTagMu_mcJPcalib_HLTDiJet170_pt250to350_CD.txt -q 8nh
@@ -40,6 +40,8 @@ eospath=/eos/cms/store/group/phys_btag/BoostedBTag/BTagNTuples/8_0_X_v2.03/BTagV
 
 
 #############older submit scipts, only saves locally.###########
+./createAndSubmitJobs.py -w Mary_outputs -c btagvalidation_cfg.py -d txt_forJobSubmits/mary_SF_94x_DoubleMuonTag_QCDMuEnriched_BTagMu_17Nov17ReRecoMiniAOD.txt -q 8nh
+
 
 # ./createAndSubmitJobs.py -w Mu_350 -c btagvalidation_cfg.py -d txt_forJobSubmits/rizki_SF_80x_DoubleMuonTag_QCDMuEnriched_BTagMu_mcJPcalib_HLTAK8Jet300_OR_HLTJet300_pt350.txt -q 8nh
 # ./createAndSubmitJobs.py -w Mu_250 -c btagvalidation_cfg.py -d txt_forJobSubmits/rizki_SF_80x_DoubleMuonTag_QCDMuEnriched_BTagMu_mcJPcalib_HLTDiJet170_pt250to350.txt -q 8nh

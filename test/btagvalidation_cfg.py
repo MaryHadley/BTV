@@ -14,7 +14,7 @@ options.register('reportEvery', 1000,
     VarParsing.varType.int,
     "Report every N events (default is N=1000)"
     )
-options.register('DEBUG', False,
+options.register('DEBUG', True,
    VarParsing.multiplicity.singleton,
    VarParsing.varType.bool,
    "Display debugging statements"
@@ -74,11 +74,12 @@ options.register('usePrunedSubjets', False,
     VarParsing.varType.bool,
     "Process pruned subjets"
     )
-options.register('useSoftDropSubjets', False,
+options.register('useSoftDropSubjets', True,
     VarParsing.multiplicity.singleton,
     VarParsing.varType.bool,
     "Process soft drop subjets"
     )
+#MHH change 13 Nov. 2018
 options.register('applySubJetMuonTagging', False,
     VarParsing.multiplicity.singleton,
     VarParsing.varType.bool,
@@ -209,12 +210,12 @@ options.register('doPUReweightingOfficial', False,
     VarParsing.varType.bool,
     "Do pileup reweighting"
     )
-options.register('FilePUDistData', '/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Jan10-2018_CommSF_v1/CMSSW_9_4_1/src/RecoBTag/BTagValidation/BTV/aux/RunII2017Rereco_RunBCDEF_v1v2topUp_25ns_PUXsec69200nb_Feb8-2018.root',
+options.register('FilePUDistData', '/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/BTV/aux/RunII2017Rereco_RunBCDEF_v1v2topUp_25ns_PUXsec69200nb_Feb8-2018.root',
     VarParsing.multiplicity.singleton,
     VarParsing.varType.string,
     "File for data/MC weights for PU reweight (official)"
     )
-options.register('FilePUDistMC', '/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Jan10-2018_CommSF_v1/CMSSW_9_4_1/src/RecoBTag/BTagValidation/BTV/aux/PUDistMC_2017_25ns_WinterMC_PUScenarioV1_PoissonOOTPU.root',
+options.register('FilePUDistMC', '/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/BTV/aux/PUDistMC_2017_25ns_WinterMC_PUScenarioV1_PoissonOOTPU.root',
     VarParsing.multiplicity.singleton,
     VarParsing.varType.string,
     "File for data/MC weights for PU reweight (official)"
@@ -324,12 +325,12 @@ options.register('btagSFType', "central",
     VarParsing.varType.bool,
     "Apply b-tagging SFs"
     )
-options.register('FileFatJetPtWt', '/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Jan10-2018_CommSF_v1/CMSSW_9_4_1/src/RecoBTag/BTagValidation/BTV/aux/dataMC_weight_calc/FatJet_pt_all_data_mc_weight_Run2017BCDEF_ReReco_QCDMuonEnriched_AK8Jet300orAK4Jet300_Pt350_Final_DoubleMuonTaggedFatJets_histograms_btagval_v3.root',
+options.register('FileFatJetPtWt', '/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/BTV/aux/dataMC_weight_calc/FatJet_pt_all_data_mc_weight_Run2017BCDEF_ReReco_QCDMuonEnriched_AK8Jet300orAK4Jet300_Pt350_Final_DoubleMuonTaggedFatJets_histograms_btagval_v3.root',
     VarParsing.multiplicity.singleton,
     VarParsing.varType.string,
     "File with data/MC weights for fat jet pT reweighting"
     )
-options.register('FileNtracksWt', '/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Jan10-2018_CommSF_v1/CMSSW_9_4_1/src/RecoBTag/BTagValidation/BTV/aux/dataMC_weight_calc/FatJet_track_multi_data_mc_weight_Mu_350.root',
+options.register('FileNtracksWt', '/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/BTV/aux/dataMC_weight_calc/FatJet_track_multi_data_mc_weight_Mu_350.root',
     VarParsing.multiplicity.singleton,
     VarParsing.varType.string,
     "File with data/MC weights for fat jet ntracks reweighting"
@@ -360,7 +361,7 @@ options.register('newJECPayloadNames',"",
     "New JEC payload names"
     ),
 options.register('jecUncPayloadName', 
-    "/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Jan10-2018_CommSF_v1/CMSSW_9_4_1/src/RecoBTag/BTagValidation/BTV/aux/JECfiles/Summer16_23Sep2016V3_MC_Uncertainty_AK8PFchs.txt",
+    "/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/BTV/aux/JECfiles/Summer16_23Sep2016V3_MC_Uncertainty_AK8PFchs.txt",
     VarParsing.multiplicity.singleton,
     VarParsing.varType.string, 
     "JEC uncertainty payload name"
@@ -375,7 +376,7 @@ options.register('doJECUncert', False,
     VarParsing.varType.bool,
     "Do JEC uncertainty"
     )
-options.register('FileBFrag', "/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Jan10-2018_CommSF_v1/CMSSW_9_4_1/src/RecoBTag/BTagValidation/BTV/aux/PtRelFall12/",
+options.register('FileBFrag', "/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/BTV/aux/PtRelFall12/",
     VarParsing.multiplicity.singleton,
     VarParsing.varType.string,
     "File path for doBFrag systematics"
@@ -548,7 +549,7 @@ process.btagval = cms.EDAnalyzer('BTagValidation',
     btagOperatingPoint     = cms.int32(options.btagOperatingPoint),
     btagMeasurementType    = cms.string(options.btagMeasurementType),
     btagSFType             = cms.string(options.btagSFType), 
-    newJECPayloadNames     = cms.vstring('/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Jan10-2018_CommSF_v1/CMSSW_9_4_1/src/RecoBTag/BTagValidation/BTV/aux/JECfiles/Summer16_23Sep2016V3_MC_L1FastJet_AK8PFchs.txt','/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Jan10-2018_CommSF_v1/CMSSW_9_4_1/src/RecoBTag/BTagValidation/BTV/aux/JECfiles/Summer16_23Sep2016V3_MC_L2Relative_AK8PFchs.txt','/afs/cern.ch/work/r/rsyarif/work/HbbTagVal/Jan10-2018_CommSF_v1/CMSSW_9_4_1/src/RecoBTag/BTagValidation/BTV/aux/JECfiles/Summer16_23Sep2016V3_MC_L3Absolute_AK8PFchs.txt'), 
+    newJECPayloadNames     = cms.vstring('/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/BTV/aux/JECfiles/Summer16_23Sep2016V3_MC_L1FastJet_AK8PFchs.txt','/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/BTV/aux/JECfiles/Summer16_23Sep2016V3_MC_L2Relative_AK8PFchs.txt','/afs/cern.ch/work/m/mhadley/public/another_test_run_of_boosted_doubleB/CMSSW_9_4_9/src/RecoBTag/BTagValidation/BTV/aux/JECfiles/Summer16_23Sep2016V3_MC_L3Absolute_AK8PFchs.txt'), 
     jecUncPayloadName      = cms.string(options.jecUncPayloadName), 
     doNewJEC               = cms.bool(options.doNewJEC),
     doJECUncert            = cms.bool(options.doJECUncert),  

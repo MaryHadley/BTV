@@ -1,18 +1,24 @@
 #!/usr/bin/env python
 
 import sys, os, shutil, re, subprocess
+import glob
 from optparse import OptionParser
 
+#input_dir is the path
 
 def make_filenamelist(input_dir):
 
-    proc = subprocess.Popen( [ '/afs/cern.ch/project/eos/installation/cms/bin/eos.select', 'ls', input_dir ], stdout = subprocess.PIPE, stderr = subprocess.STDOUT )
-    output = proc.communicate()[0]
-    if proc.returncode != 0:
-        print output
-        sys.exit(1)
-
-    return output.splitlines()
+    #proc = subprocess.Popen( [ '/afs/cern.ch/project/eos/installation/cms/bin/eos.select', 'ls', input_dir ], stdout = subprocess.PIPE, stderr = subprocess.STDOUT )
+    print 'input_dir is:', input_dir
+    #proc = subprocess.Popen( [ '', 'ls', input_dir ], stdout = subprocess.PIPE, stderr = subprocess.STDOUT )
+    #output = proc.communicate()[0]
+    #if proc.returncode != 0:
+     #   print output
+      #  sys.exit(1)
+    os.system('ls ' + input_dir)
+    inputFileList = glob.glob('%s/*/*.root' %(input_dir))
+    print 'inputFileList is:', inputFileList
+    return inputFileList
 
 
 def process_input_dir(input_dir, match, filelist):
